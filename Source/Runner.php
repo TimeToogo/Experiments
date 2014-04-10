@@ -37,12 +37,12 @@ foreach (get_declared_classes() as $Class) {
         $Reflection = new \ReflectionClass($Class);
         if($Reflection->isInstantiable() && isset($ExperimentFiles[$Reflection->getFileName()])) {
             $ModifiedTime = $ExperimentFiles[$Reflection->getFileName()];
-            $Experiments[$ExperimentFiles[$Reflection->getFileName()]] = new $Class();
+            $Experiments[$Reflection->getFileName()] = new $Class();
         }
     }
 }
-//Descending modified order
-krsort($Experiments, SORT_NUMERIC);
+//Alphabetical order
+ksort($Experiments);
 
 Output::MainHeader('- Begining PHP Experiments -');
 Output::NewLine();
