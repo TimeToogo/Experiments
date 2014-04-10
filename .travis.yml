@@ -10,4 +10,4 @@ matrix:
   allow_failures:
     - php: hhvm
 
-script: php Source/Experiments.php
+script: php Source/Runner.php
