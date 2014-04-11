@@ -24,13 +24,17 @@ class DynamicArrayMultisort extends \Experiments\Printer
         
         $Arguments = [];
         
+        $Asecending = SORT_ASC;
+        $Descending = SORT_DESC;
+        $Regular = SORT_REGULAR;
+        
         $Arguments[] =& $Volumes;
-        $Arguments[] = SORT_DESC;
-        $Arguments[] = SORT_REGULAR;
+        $Arguments[] =& $Descending;
+        $Arguments[] =& $Regular;
         
         $Arguments[] =& $Editions;
-        $Arguments[] = SORT_DESC;
-        $Arguments[] = SORT_REGULAR;
+        $Arguments[] =& $Asecending;
+        $Arguments[] =& $Regular;
         
         $Arguments[] =& $Data;
         
