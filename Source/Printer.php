@@ -18,7 +18,7 @@ abstract class Printer extends Experiment
     {
         ob_start();
         $this->Output();
-        $Output[] = ob_get_contents();
+        $Output = array_merge($Output, explode(PHP_EOL, ob_get_contents()));
         ob_end_clean();
     }
     protected abstract function Output();
