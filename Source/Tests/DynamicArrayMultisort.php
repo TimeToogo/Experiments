@@ -29,7 +29,7 @@ class DynamicArrayMultisort extends \Experiments\Printer
         $Regular = SORT_REGULAR;
         
         $Arguments[] =& $Volumes;
-        $Arguments[] = SORT_DESC;
+        $Arguments[] =& $Descending;
         $Arguments[] =& $Regular;
         
         $Arguments[] =& $Editions;
