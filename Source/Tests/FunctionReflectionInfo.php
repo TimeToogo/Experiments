@@ -33,9 +33,9 @@ class FunctionReflectionInfo extends \Experiments\Printer
                 
                 try {
                     var_dump($Method->invoke($Reflection));
-                    echo PHP_EOL;
                 }
-                catch (\Exception $Exception) {}
+                catch (\Exception $Exception) { echo 'Exception'; }
+                echo PHP_EOL;
             }
         }
     }
